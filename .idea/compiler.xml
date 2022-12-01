@@ -9,5 +9,8 @@
         <module name="CommonBookWords" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CommonBookWords" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
