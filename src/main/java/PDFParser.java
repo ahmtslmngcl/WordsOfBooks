@@ -9,14 +9,14 @@ import org.xml.sax.SAXException;
 
 public class PDFParser {
 
-    String filename;
-    File file;
-    FileInputStream fileInputStream;
-    Metadata metadata;
+    private String filename;
+    private File file;
+    private FileInputStream fileInputStream;
+    private Metadata metadata;
 
-    org.apache.tika.parser.pdf.PDFParser pdfParser;
-    ParseContext context;
-    BodyContentHandler contentHandler;
+    private org.apache.tika.parser.pdf.PDFParser pdfParser;
+    private ParseContext context;
+    private BodyContentHandler contentHandler;
 
     public PDFParser(String filename) throws IOException {
         this.filename = filename;
@@ -34,14 +34,16 @@ public class PDFParser {
         return contentHandler.toString();
     }
 
+    /*
     public static void main(String[] args) throws IOException, TikaException, SAXException {
         // Platziere pdf das extrahiert werden soll in pdfFiles.
         // Gebe als filename den absolut-Pfad an.
         // Bsp. für parsen von discord ausarbeitung:
-        String filename = "src/main/java/pdfFiles/[pdffilename].pdf";
+        //String filename = "src/main/java/pdfFiles/[pdffilename].pdf";
+        String filename = "src/main/java/pdfFiles/CV-TumAI.pdf";
         PDFParser pdfParser = new PDFParser(filename);
         System.out.println(pdfParser.pdfToString());
     }
-
+    */
 
 }
