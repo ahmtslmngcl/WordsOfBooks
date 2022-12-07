@@ -27,12 +27,13 @@ public class Book {
         this.allWords = this.textScaper.analyseWords(this.content);
     }
 
+    //todo: update newWordCounter
     public void printNewWords() {
         if (this.newWordIndex == this.allWords.length) {
             System.out.println("There are no new words");
             return;
         }
-        boolean hasTenMoreWords = (this.allWords.length-this.newWordIndex) > 10;
+        boolean hasTenMoreWords = (this.allWords.length-this.newWordIndex) >= 10;
         if (hasTenMoreWords) {
             for (int i = this.newWordIndex; i < newWordIndex+10; i++) {
                 System.out.println(this.allWords[i]);
