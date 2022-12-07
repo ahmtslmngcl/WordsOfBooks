@@ -32,9 +32,9 @@ public class Book {
             System.out.println("There are no new words");
             return;
         }
-        boolean hasTenMoreWords = (this.allWords.length-this.newWordIndex) >= 10;
+        boolean hasTenMoreWords = (this.allWords.length-this.newWordIndex) > 10;
         if (hasTenMoreWords) {
-            for (int i = this.newWordIndex; i <= i+10; i++) {
+            for (int i = this.newWordIndex; i < newWordIndex+10; i++) {
                 System.out.println(this.allWords[i]);
             }
         } else {
